@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skyline Sprint</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="game-panel">
+      <div class="hud">
+        <div class="hud__group">
+          <span class="hud__label">Уровень</span>
+          <span id="levelValue" class="hud__value">1</span>
+        </div>
+        <div class="hud__group">
+          <span class="hud__label">Монеты</span>
+          <span id="coinsValue" class="hud__value">0 / 0</span>
+        </div>
+        <div class="hud__group">
+          <span class="hud__label">Жизни</span>
+          <span id="livesValue" class="hud__value">3</span>
+        </div>
+        <div class="hud__group">
+          <span class="hud__label">Время</span>
+          <span id="timerValue" class="hud__value">0.0s</span>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="960" height="540" aria-label="Игра платформер"></canvas>
+
+      <div class="controls">
+        <button id="startButton" class="btn btn--primary">Старт / Продолжить</button>
+        <button id="restartButton" class="btn">С нуля</button>
+        <button id="muteButton" class="btn">Звук: выкл</button>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <h1>Skyline Sprint</h1>
+      <p class="sidebar__lead">
+        Полностью готовый 2D-платформер на Canvas без библиотек: 4 уровня, монеты,
+        ловушки, финальная цель, экран победы и повторный запуск.
+      </p>
+
+      <div class="card">
+        <h2>Управление</h2>
+        <ul>
+          <li><strong>A / D</strong> или <strong>← / →</strong> — движение</li>
+          <li><strong>W / ↑ / Space</strong> — прыжок</li>
+          <li><strong>R</strong> — перезапуск уровня</li>
+          <li><strong>Enter</strong> — начать / продолжить</li>
+          <li><strong>M</strong> — звук вкл/выкл</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>MVP по методике пары</h2>
+        <ol>
+          <li>Разделение проекта на папки <code>css/</code>, <code>js/</code>, <code>assets/</code>.</li>
+          <li>Есть core-loop: движение → сбор монет → финиш.</li>
+          <li>4 уровня с ростом сложности.</li>
+          <li>Проверяемое состояние победы/проигрыша.</li>
+          <li>README c pipeline: setup → build → verify → commit.</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <h2>Что уже реализовано</h2>
+        <ul>
+          <li>Спрайт игрока из <code>assets/player.png</code></li>
+          <li>Фон из <code>assets/background.png</code></li>
+          <li>Монеты из <code>assets/coin.png</code></li>
+          <li>Финиш из <code>assets/goal.png</code></li>
+          <li>Анимации: бег/прыжок, покачивание монет, пульсация цели</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
